@@ -1,0 +1,61 @@
+:root {
+  --bg: #faf7fd;
+  --header: #e6d6f5;
+  --grid-bg: #f4ebfa;
+  --btn: #a56dff;
+}
+
+.appContainer {
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  background: #0A0A0A;
+  padding: 20px;
+  min-height: 100vh; 
+}
+
+.title {
+  color: var(--btn);
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+.board {
+  width: 420px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  background: var(--grid-bg);
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+
+.boardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--header);
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #5a2d91; 
+}
+
+.controls {
+  margin-top: 12px;
+}
+
+.startBtn {
+  background: #D90368;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1em;
+}
+
+.startBtn:hover {
+  background: #A0024E;
+}
