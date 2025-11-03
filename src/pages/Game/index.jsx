@@ -38,6 +38,15 @@ function Game() {
       link: "#",
       difficulty: "Advanced",
       status: "Planning"
+    },
+    {
+      id: 42, 
+      title: 'Minesweeper',
+      description:'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
+      author: 'Maksym Maliutin',
+      link: '/maliutin-maksym', 
+      difficulty: 'Intermediate', 
+      status: 'Complete',
     }
   ]
 
