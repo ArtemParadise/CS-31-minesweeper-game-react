@@ -1,0 +1,4 @@
+.backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; z-index:50; }
+.modal{ border:none; border-radius:16px; padding:18px 16px; background:var(--paper); color:var(--ink); box-shadow:var(--shadow); width:min(92vw,420px); }
+.text{ margin:0 0 12px; text-align:center; font-weight:700; }
+.btn{ display:block; margin:0 auto; padding:10px 14px; border-radius:12px; background:linear-gradient(180deg,var(--accent),#16a34a); border:none; color:#fff; cursor:pointer; }

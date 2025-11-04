@@ -1,0 +1,14 @@
+.toolbar{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
+  background:var(--paper); border-radius:16px; padding:12px 16px; box-shadow:var(--shadow); }
+.group{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.select{ display:flex; gap:8px; align-items:center; }
+.select select{ padding:8px 10px; border-radius:10px; border:1px solid #94a3b8; background:var(--paper); color:var(--ink); }
+.custom label{ display:flex; gap:6px; align-items:center; font-size:14px; }
+.custom input{ width:76px; padding:6px; border-radius:8px; border:1px solid #94a3b8; background:var(--paper); color:var(--ink); }
+.btn{ border:1px solid #94a3b8; background:var(--paper); color:var(--ink); padding:10px 14px; border-radius:12px; cursor:pointer;
+  transition:.15s transform,.2s box-shadow; }
+.btn:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.15); }
+.btn:active{ transform:translateY(0); }
+.primary{ background:linear-gradient(180deg,var(--accent),#16a34a); color:#fff; border:none; }
+.counters{ margin-left:auto; }
+.counter{ background:var(--paper); padding:8px 10px; border-radius:10px; border:1px solid #94a3b8; min-width:86px; text-align:center; }

@@ -1,0 +1,15 @@
+:root {
+  --bg:#eef1f4; --paper:#f7f9fb; --ink:#222; --muted:#6b7280;
+  --accent:#22c55e; --accent-2:#3b82f6; --danger:#ef4444;
+  --cell:#c9d2dc; --cell-top:#fff; --cell-side:#9aa5b1; --cell-open:#e5e9ef;
+  --shadow:0 10px 24px rgba(0,0,0,.08);
+}
+:root.dark {
+  --bg:#0f172a; --paper:#0b1224; --ink:#e5e7eb; --muted:#9ca3af;
+  --accent:#22c55e; --accent-2:#60a5fa; --danger:#f87171;
+  --cell:#1f2a44; --cell-top:#2b3a5b; --cell-side:#0a0f1f; --cell-open:#142037;
+  --shadow:0 10px 24px rgba(0,0,0,.4);
+}
+.app { max-width:1000px; margin:0 auto; padding:24px; color:var(--ink); }
+.title { margin:0 0 12px; font-weight:800; letter-spacing:.3px; }
+.boardWrap { margin-top:16px; }
