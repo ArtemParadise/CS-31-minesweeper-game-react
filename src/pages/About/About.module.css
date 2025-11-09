@@ -1,0 +1,116 @@
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+.about h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 2.5em;
+  background: linear-gradient(45deg, #64b5f6, #90caf9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aboutSection {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  backdrop-filter: blur(10px);
+}
+
+.aboutSection h2 {
+  color: #64b5f6;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+  border-bottom: 2px solid #64b5f6;
+  padding-bottom: 0.5rem;
+}
+
+.aboutSection p {
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 1rem;
+}
+
+.aboutSection ol,
+.aboutSection ul {
+  line-height: 1.6;
+  color: #b0b0b0;
+  padding-left: 1.5rem;
+}
+
+.aboutSection li {
+  margin-bottom: 0.5rem;
+}
+
+.aboutSection strong {
+  color: #64b5f6;
+}
+
+.difficultyLevels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.difficultyCard {
+  background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.difficultyCard:hover {
+  border-color: #64b5f6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(100, 181, 246, 0.2);
+}
+
+.difficultyCard h3 {
+  margin-top: 0;
+  color: #64b5f6;
+  font-size: 1.2em;
+}
+
+.difficultyCard p {
+  margin-bottom: 0;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0 1rem;
+  }
+
+  .about h1 {
+    font-size: 2em;
+  }
+
+  .aboutSection {
+    padding: 1.5rem;
+  }
+
+  .difficultyLevels {
+    grid-template-columns: 1fr;
+  }
+}

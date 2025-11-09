@@ -1,0 +1,178 @@
+.gameContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+.gameHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  backdrop-filter: blur(10px);
+}
+
+.gameHeader h1 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 2.5em;
+  background: linear-gradient(45deg, #64b5f6, #90caf9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gameHeader p {
+  color: #b0b0b0;
+  font-size: 1.1em;
+  margin-bottom: 1rem;
+}
+
+.instructions {
+  background: rgba(100, 181, 246, 0.1);
+  border: 1px solid rgba(100, 181, 246, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.instructions p {
+  color: #64b5f6;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.implementationsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.implementationCard {
+  background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.implementationCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(100, 181, 246, 0.2);
+  border-color: #64b5f6;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.cardHeader h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.3em;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.statusBadge,
+.difficultyBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.author {
+  color: #64b5f6;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-size: 0.9em;
+}
+
+.description {
+  color: #b0b0b0;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.linkBtn {
+  background: linear-gradient(135deg, #64b5f6 0%, #90caf9 100%);
+  color: #0a0a0a;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.linkBtn:hover {
+  background: linear-gradient(135deg, #90caf9 0%, #64b5f6 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(100, 181, 246, 0.3);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  backdrop-filter: blur(10px);
+}
+
+.emptyState h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.emptyState p {
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+  font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .implementationsList {
+    grid-template-columns: 1fr;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cardHeader h3 {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .badges {
+    align-self: flex-start;
+  }
+}
