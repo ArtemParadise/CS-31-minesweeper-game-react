@@ -1,12 +1,13 @@
 import React from 'react';
 import Timer from '../Timer';
 import styles from './Header.module.css';
+import { GAME_STATUS } from '../../../core/MaliutinMaksym/constants.js';
 
 const Header = ({ flagsLeft, gameStatus, onRestart }) => {
   
   const getButtonText = () => {
-    if (gameStatus === 'won') return 'You Won!';
-    if (gameStatus === 'lost') return 'Try Again';
+    if (gameStatus === GAME_STATUS.WON) return 'You Won!';
+    if (gameStatus === GAME_STATUS.LOST) return 'Try Again';
     return 'Restart';
   };
 

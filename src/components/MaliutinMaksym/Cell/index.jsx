@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Cell.module.css';
-import { CELL_STATE } from '../../../pages/MaliutinMaksym/gameLogic'; // Імпортуємо з логіки
+import { CELL_STATE } from '../../../core/MaliutinMaksym/constants.js'; 
 
 const Cell = React.memo(({ cellData, onClick, onContextMenu }) => {
   

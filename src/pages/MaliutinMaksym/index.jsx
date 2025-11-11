@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Board from '../../components/MaliutinMaksym/Board';
 import Header from '../../components/MaliutinMaksym/Header';
 import {
+  GAME_STATUS,
+  CELL_STATE,
+} from '../../core/MaliutinMaksym/constants.js';
+import {
   generateField,
   revealCell,
   toggleFlagOnCell,
   checkWinCondition,
-  GAME_STATUS,
-  CELL_STATE,
 } from './gameLogic';
 import styles from './MaliutinMaksym.module.css';
 
@@ -29,17 +31,17 @@ const MaliutinMaksymGame = () => {
 
     // Перевірка перемоги
     if (checkWinCondition(board, ROWS, COLS, MINES)) {
-      setGameStatus(GAME_STATUS.WON);
+      setGameStatus(GAME_STATUS.WON); 
       alert('You Win!');
     }
-  }, [board, gameStatus]); // Запускається при кожній зміні дошки
+  }, [board, gameStatus]); 
 
   // --- ОБРОБНИКИ ПОДІЙ ---
 
   // Скидання гри
   const handleRestart = () => {
     setBoard(generateField(ROWS, COLS, MINES));
-    setGameStatus(GAME_STATUS.READY);
+    setGameStatus(GAME_STATUS.READY); 
     setFlagsCount(0);
   };
 
@@ -47,7 +49,7 @@ const MaliutinMaksymGame = () => {
   const handleCellClick = (row, col) => {
     // Починаємо гру при першому кліку
     if (gameStatus === GAME_STATUS.READY) {
-      setGameStatus(GAME_STATUS.PLAYING);
+      setGameStatus(GAME_STATUS.PLAYING); 
     }
     
     if (gameStatus === GAME_STATUS.WON || gameStatus === GAME_STATUS.LOST) return;
@@ -56,23 +58,23 @@ const MaliutinMaksymGame = () => {
     setBoard(newBoard);
 
     if (gameOver) {
-      setGameStatus(GAME_STATUS.LOST);
+      setGameStatus(GAME_STATUS.LOST); 
       alert('Game Over!');
     }
   };
 
   // Клік правою кнопкою (контекстне меню)
   const handleCellContextMenu = (e, row, col) => {
-    e.preventDefault(); // Забороняємо стандартне контекстне меню
+    e.preventDefault(); 
 
     if (gameStatus === GAME_STATUS.READY) {
-      setGameStatus(GAME_STATUS.PLAYING);
+      setGameStatus(GAME_STATUS.PLAYING); 
     }
 
     if (gameStatus === GAME_STATUS.WON || gameStatus === GAME_STATUS.LOST) return;
     
     const cell = board[row][col];
-    if (cell.state === CELL_STATE.OPEN) return; // Не можна ставити прапор на відкриту
+    if (cell.state === CELL_STATE.OPEN) return; 
 
     // Обмежуємо кількість прапорів
     if (flagsCount >= MINES && cell.state === CELL_STATE.CLOSED) {
@@ -89,7 +91,7 @@ const MaliutinMaksymGame = () => {
 
   return (
     <div className={styles.pageWrapper}>
-      <h1>Minesweeper</h1>
+      <h1>Minesweeper (React)</h1>
       <div className={styles.gameBoardWrapper}>
         <Header
           flagsLeft={flagsLeft}
