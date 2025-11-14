@@ -1,0 +1,8 @@
+a.gameBoard {
+    border: 1px solid #ccc;
+    border-top: none; /* Хедер вже має свій бордер */
+  }
+  
+  .boardRow {
+    display: flex;
+  }

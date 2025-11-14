@@ -1,0 +1,10 @@
+:root {
+  --grid-bg: #f4ebfa;
+}
+
+.grid {
+  display: grid;
+  background: var(--grid-bg);
+  padding: 10px;
+  gap: 3px;
+}
