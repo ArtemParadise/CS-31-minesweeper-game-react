@@ -1,98 +1,91 @@
-import styles from './Game.module.css'
+import styles from './Game.module.css';
 
-function Game() {
-  // Add your implementations here by editing this array
+export default function Game() {
   const implementations = [
     {
       id: 1,
-      title: "Mock Minesweeper Game",
-      description: "A fully functional minesweeper implementation with timer, flagging, and win/lose detection. This serves as an example for students.",
-      author: "Example Implementation",
-      link: "/mock-game",
-      difficulty: "Beginner",
-      status: "Complete"
-    },
-    {
-      id: 2,
-      title: "Basic Minesweeper",
-      description: "A simple implementation with basic game mechanics",
-      author: "Author Name",
-      link: "#",
-      difficulty: "Beginner",
-      status: "Complete"
-    },
-    {
-      id: 3,
-      title: "Advanced Minesweeper",
-      description: "Features timer, high scores, and custom difficulty",
-      author: "Author name",
-      link: "#",
-      difficulty: "Intermediate",
-      status: "In Progress"
-    },
-    {
-      id: 4,
-      title: "Minesweeper with Themes",
-      description: "Multiple visual themes and sound effects",
-      author: "Author name",
-      link: "#",
-      difficulty: "Advanced",
-      status: "Planning"
-    },
-    {
-      id: 42, 
-      title: 'Minesweeper',
-      description:'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
-      author: 'Maksym Maliutin',
-      link: '/maliutin-maksym', 
-      difficulty: 'Intermediate', 
+      title: 'Mock Minesweeper Game',
+      description: 'Reference implementation.',
+      author: 'Example',
+      link: '/mock-game',
+      difficulty: 'Beginner',
       status: 'Complete',
     },
     {
-      id: 5, 
-      title: "Minesweeper (React Migration)",
-      description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
-      author: "Uzenkova Daria",
-      link: "/uzenkova-daria", 
-      difficulty: "Intermediate",
-      status: "Complete"
-    }
-      id: 5, 
-      title: "Minesweeper (React Migration)",
-      description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
-      author: "Uzenkova Daria",
-      link: "/uzenkova-daria", 
-      difficulty: "Intermediate",
-      status: "Complete"
-    }
+      id: 2,
+      title: 'Minesweeper (React + CSS Modules)',
+      description:
+        'Компоненти: Board/Cell/Toolbar/Modal. Безпечний перший клік, акорд, рекорди.',
+      author: 'Malenchuk Maryna',
+      link: '/malenchuk-maryna',
+      difficulty: 'Intermediate',
+      status: 'Complete',
+    },
+    {
+      id: 4,
+      title: 'Minesweeper with Themes',
+      description: 'Multiple visual themes and sound effects',
+      author: 'Author name',
+      link: '#',
+      difficulty: 'Advanced',
+      status: 'Planning',
+    },
+    {
+      id: 42,
+      title: 'Minesweeper',
+      description:
+        'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
+      author: 'Maksym Maliutin',
+      link: '/maliutin-maksym',
+      difficulty: 'Intermediate',
+      status: 'Complete',
+    },
+    {
+      id: 5,
+      title: 'Minesweeper (React Migration)',
+      description:
+        'A complete migration of the original JS game to React, using components, hooks, and CSS Modules.',
+      author: 'Uzenkova Daria',
+      link: '/uzenkova-daria',
+      difficulty: 'Intermediate',
+      status: 'Complete',
+    },
+    {
       id: 15,
-      title: "Minesweeper - Prohvatilov Anton",
-      description: "Lab 5 implementation using React and CSS Modules.",
-      author: "Prohvatilov Anton",
-      link: "/prohvatilov-anton",
-      difficulty: "Intermediate",
-      status: "In Progress"
-    }
-
-  ]
+      title: 'Minesweeper - Prohvatilov Anton',
+      description: 'Lab 5 implementation using React and CSS Modules.',
+      author: 'Prohvatilov Anton',
+      link: '/prohvatilov-anton',
+      difficulty: 'Intermediate',
+      status: 'In Progress',
+    },
+  ];
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'Complete': return '#27ae60'
-      case 'In Progress': return '#f39c12'
-      case 'Planning': return '#3498db'
-      default: return '#95a5a6'
+      case 'Complete':
+        return '#27ae60';
+      case 'In Progress':
+        return '#f39c12';
+      case 'Planning':
+        return '#3498db';
+      default:
+        return '#95a5a6';
     }
-  }
+  };
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
-      case 'Beginner': return '#27ae60'
-      case 'Intermediate': return '#f39c12'
-      case 'Advanced': return '#e74c3c'
-      default: return '#95a5a6'
+      case 'Beginner':
+        return '#27ae60';
+      case 'Intermediate':
+        return '#f39c12';
+      case 'Advanced':
+        return '#e74c3c';
+      default:
+        return '#95a5a6';
     }
-  }
+  };
 
   return (
     <div className={styles.gameContainer}>
@@ -100,7 +93,10 @@ function Game() {
         <h1>Student Implementations</h1>
         <p>Browse student minesweeper implementations</p>
         <div className={styles.instructions}>
-          <p><strong>To add implementations:</strong> Edit the implementations array in the code</p>
+          <p>
+            <strong>To add implementations:</strong> Edit the implementations
+            array in the code
+          </p>
         </div>
       </div>
 
@@ -118,7 +114,9 @@ function Game() {
                 </span>
                 <span
                   className={styles.difficultyBadge}
-                  style={{ backgroundColor: getDifficultyColor(impl.difficulty) }}
+                  style={{
+                    backgroundColor: getDifficultyColor(impl.difficulty),
+                  }}
                 >
                   {impl.difficulty}
                 </span>
@@ -128,10 +126,7 @@ function Game() {
             <p className={styles.description}>{impl.description}</p>
             <div className={styles.cardActions}>
               {impl.link.startsWith('/') ? (
-                <a
-                  href={impl.link}
-                  className={styles.linkBtn}
-                >
+                <a href={impl.link} className={styles.linkBtn}>
                   View Implementation →
                 </a>
               ) : (
@@ -156,7 +151,5 @@ function Game() {
         </div>
       )}
     </div>
-  )
+  );
 }
-
-export default Game

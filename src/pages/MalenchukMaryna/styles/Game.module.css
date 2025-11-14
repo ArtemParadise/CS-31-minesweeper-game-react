@@ -1,0 +1,21 @@
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 48px);
+  text-align: center;
+}
+
+/* обгортка для дошки – саме тут ми її центруємо */
+.boardWrap {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* центрує дошку по горизонталі */
+}

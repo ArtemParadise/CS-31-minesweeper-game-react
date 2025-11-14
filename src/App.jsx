@@ -1,12 +1,13 @@
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import About from './pages/About'
-import Game from './pages/Game'
-import MockGame from './pages/MockGame'
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Game from './pages/Game';
+import MockGame from './pages/MockGame';
 import MaliutinMaksymGame from './pages/MaliutinMaksym';
-import UzenkovaDaria from './pages/UzenkovaDaria'
-import ProhvatilovAntonGame from './pages/ProhvatilovAnton'
+import UzenkovaDaria from './pages/UzenkovaDaria';
+import ProhvatilovAntonGame from './pages/ProhvatilovAnton';
+import MalenchukMarynaPage from './pages/MalenchukMaryna';
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
         <Route path="maliutin-maksym" element={<MaliutinMaksymGame />} />
         <Route path="uzenkova-daria" element={<UzenkovaDaria />} />
         <Route path="prohvatilov-anton" element={<ProhvatilovAntonGame />} />
+        <Route path="malenchuk-maryna" element={<MalenchukMarynaPage />} />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
