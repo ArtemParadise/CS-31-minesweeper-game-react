@@ -18,7 +18,7 @@ function App() {
         <Route path="mock-game" element={<MockGame />} />
         <Route path="uzenkova-daria" element={<UzenkovaDaria />} />
         <Route path="prohvatilov-anton" element={<ProhvatilovAntonGame />} />
-        <Route path="siller-olena" element={<MinesweeperSiller_Olena />} />
+        <Route path="siller-olena" element={<MinesweeperSiller />} />
       </Route>
     </Routes>
   )
