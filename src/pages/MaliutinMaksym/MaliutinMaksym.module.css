@@ -1,0 +1,25 @@
+/* Загальні стилі для сторінки гри */
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .pageWrapper h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #1976d2;
+  }
+  
+  /* Контейнер гри */
+  .gameBoardWrapper {
+    width: fit-content;
+    background: #ffffff; /* --panel-bg */
+    border: 1px solid #ccc; /* --border-color */
+    border-radius: 6px;
+    overflow: hidden;
+    /* Тінь для гарного вигляду */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }

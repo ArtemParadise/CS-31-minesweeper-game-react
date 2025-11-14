@@ -1,0 +1,31 @@
+.gameBoardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e0e0e0;
+    padding: 15px 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .flagsLeft {
+    font-size: 1.1em;
+    color: #388e3c;
+  }
+  
+  .startButton {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #1976d2;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .startButton:hover {
+    background: #1565c0;
+    transform: scale(1.05);
+  }
