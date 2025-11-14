@@ -22,15 +22,6 @@ function Game() {
       status: "Complete"
     },
     {
-      id: 3,
-      title: "Advanced Minesweeper",
-      description: "Features timer, high scores, and custom difficulty",
-      author: "Author name",
-      link: "#",
-      difficulty: "Intermediate",
-      status: "In Progress"
-    },
-    {
       id: 4,
       title: "Minesweeper with Themes",
       description: "Multiple visual themes and sound effects",
@@ -40,6 +31,15 @@ function Game() {
       status: "Planning"
     },
     {
+      id: 3,
+      title: "Olena Siller Minesweeper",
+      description: "Features timer, high scores, and custom difficulty",
+      author: "Olena Siller",
+      link: "/siller-olena",
+      difficulty: "Intermediate",
+      status: "Complete"
+    },
+    {
       id: 5, 
       title: "Minesweeper (React Migration)",
       description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
@@ -47,7 +47,8 @@ function Game() {
       link: "/uzenkova-daria", 
       difficulty: "Intermediate",
       status: "Complete"
-    }
+    },
+    {
       id: 15,
       title: "Minesweeper - Prohvatilov Anton",
       description: "Lab 5 implementation using React and CSS Modules.",
@@ -56,7 +57,6 @@ function Game() {
       difficulty: "Intermediate",
       status: "In Progress"
     }
-
   ]
 
   const getStatusColor = (status) => {
