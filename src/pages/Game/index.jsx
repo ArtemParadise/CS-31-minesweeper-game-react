@@ -40,6 +40,23 @@ function Game() {
       status: "Planning"
     },
     {
+      id: 42, 
+      title: 'Minesweeper',
+      description:'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
+      author: 'Maksym Maliutin',
+      link: '/maliutin-maksym', 
+      difficulty: 'Intermediate', 
+      status: 'Complete',
+    },
+    {
+      id: 5, 
+      title: "Minesweeper (React Migration)",
+      description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
+      author: "Uzenkova Daria",
+      link: "/uzenkova-daria", 
+      difficulty: "Intermediate",
+      status: "Complete"
+    }
       id: 5, 
       title: "Minesweeper (React Migration)",
       description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
