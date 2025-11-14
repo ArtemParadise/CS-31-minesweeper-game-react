@@ -1,34 +1,62 @@
 import React from "react";
-import s from "../styles/Cell.module.css";
+import styles from "../styles/Cell.module.css";
 
-export default function Cell({ i, state, onOpen, onToggleFlag, onChord }) {
-  const handleClick = () => {
-    if (state.isOpen && !state.isMine && state.neighborMines > 0) onChord(i);
-    else onOpen(i);
+export default function Cell({
+  index,
+  cell,
+  onOpen,
+  onToggleFlag,
+  onChord,
+}) {
+  const handleClick = (event) => {
+    event.preventDefault();
+    if (
+      cell.isOpen &&
+      !cell.isMine &&
+      cell.neighborMines > 0
+    ) {
+      onChord(index);
+    } else {
+      onOpen(index);
+    }
   };
-  const onContext = (e) => { e.preventDefault(); onToggleFlag(i); };
 
-  const aria =
-    state.isOpen
-      ? state.isMine
-        ? "Міна"
-        : state.neighborMines > 0
-          ? `Цифра ${state.neighborMines}`
-          : "Порожньо"
-      : state.hasFlag ? "Прапорець" : "Закрита клітинка";
+  const handleContextMenu = (event) => {
+    event.preventDefault();
+    onToggleFlag(index);
+  };
 
-  const cls = [
-    s.cell,
-    state.isOpen ? s.open : s.closed,
-    state.hasFlag ? s.flag : "",
-    state.isMine && state.isOpen ? `${s.mine} ${s.revealed}` : "",
-    state.isMine && state.exploded ? s.exploded : "",
-    state.neighborMines ? s[`num${state.neighborMines}`] : "",
-  ].join(" ");
+  const classNames = [styles.cell];
+
+  if (cell.isOpen) {
+    classNames.push(styles.open);
+    if (cell.isMine) {
+      classNames.push(styles.mine, styles.revealed);
+      if (cell.exploded) classNames.push(styles.exploded);
+    } else if (cell.neighborMines > 0) {
+      classNames.push(
+        styles[`num${cell.neighborMines}`] || ""
+      );
+    }
+  } else {
+    classNames.push(styles.closed);
+    if (cell.hasFlag) classNames.push(styles.flag);
+  }
+
+  const content =
+    cell.isOpen && !cell.isMine && cell.neighborMines > 0
+      ? cell.neighborMines
+      : "";
 
   return (
-    <button type="button" className={cls} onClick={handleClick} onContextMenu={onContext} aria-label={aria}>
-      {state.isOpen && !state.isMine && state.neighborMines > 0 ? state.neighborMines : null}
+    <button
+      type="button"
+      className={classNames.join(" ")}
+      onClick={handleClick}
+      onContextMenu={handleContextMenu}
+      aria-label="Клітинка"
+    >
+      {content}
     </button>
   );
 }

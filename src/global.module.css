@@ -82,3 +82,8 @@ code {
   border-radius: 4px;
   font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}

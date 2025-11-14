@@ -1,12 +1,13 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Game from "./pages/Game";       // сторінка зі списком імплементацій
+import Game from "./pages/Game";
 import MockGame from "./pages/MockGame";
 import MalenchukMarynaPage from "./pages/MalenchukMaryna";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -21,3 +22,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App;

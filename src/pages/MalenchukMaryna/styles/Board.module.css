@@ -1,6 +1,45 @@
 .board {
-  --cols:16;
-  display:grid;
-  grid-template-columns:repeat(var(--cols),1fr);
-  gap:8px; padding:12px; border-radius:18px; background:transparent;
+  --cols: 16;
+  --cell-size: 46px; /* базовий розмір клітинки для маленьких полів */
+
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--cell-size));
+  gap: 6px;
+  padding: 10px;
+  border-radius: 18px;
+  background: transparent;
+  width: max-content; /* ширина = ширина контенту */
+}
+
+/* Легка складність (типу 9×9) – найбільші клітинки */
+.easy {
+  --cell-size: 50px;
+}
+
+/* Середня (16×16) – трохи менші */
+.medium {
+  --cell-size: 38px;
+}
+
+/* Важка (30×16 і великі кастомні) – ще дрібніші */
+.hard {
+  --cell-size: 28px;
+}
+
+@media (max-width: 1024px) {
+  .board {
+    gap: 4px;
+  }
+
+  .easy {
+    --cell-size: 42px;
+  }
+
+  .medium {
+    --cell-size: 32px;
+  }
+
+  .hard {
+    --cell-size: 24px;
+  }
 }

@@ -1,4 +1,64 @@
-.backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; z-index:50; }
-.modal{ border:none; border-radius:16px; padding:18px 16px; background:var(--paper); color:var(--ink); box-shadow:var(--shadow); width:min(92vw,420px); }
-.text{ margin:0 0 12px; text-align:center; font-weight:700; }
-.btn{ display:block; margin:0 auto; padding:10px 14px; border-radius:12px; background:linear-gradient(180deg,var(--accent),#16a34a); border:none; color:#fff; cursor:pointer; }
+.modalOverlay {
+  position: fixed;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000; /* вище за все інше */
+}
+
+.modal {
+  background: rgba(17, 24, 39, 0.96);
+  border-radius: 14px;
+  padding: 22px 28px;
+  max-width: 90vw;
+  color: #f9fafb;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  text-align: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.text {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.okBtn {
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  background: #1f2937;
+  color: #e5e7eb;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease,
+    box-shadow 0.15s ease;
+}
+
+.okBtn:hover {
+  background: #111827;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.okBtn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
