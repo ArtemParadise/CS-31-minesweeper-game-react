@@ -1,0 +1,50 @@
+/* ===== MAIN CONTAINER: оригінальний стиль ===== */
+.mainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  margin: 20px auto;
+  align-items: center;
+  z-index: 1;
+  min-height: 100vh;
+  /* Напівпрозора рамка контейнера */
+  background-color: rgba(31.875, 31.875, 31.875, 0.7);
+  border-radius: 20px;
+  padding: 77px;
+  backdrop-filter: blur(10px);
+}
+
+/* Fixed background wallpaper за всім контентом */
+.mainContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg-wallpaper);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.gameSection,
+.playerSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Placeholder for deprecated styles */
+.gameContainer,
+.bgPanel,
+.bgInner,
+.panelTitle,
+.gameWrapper {
+  /* deprecated - using mainContainer + gameSection/playerSection instead */
+}

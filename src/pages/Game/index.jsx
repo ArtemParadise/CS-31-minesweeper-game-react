@@ -56,24 +56,25 @@ function Game() {
       link: "/uzenkova-daria", 
       difficulty: "Intermediate",
       status: "Complete"
-    }
-      id: 5, 
-      title: "Minesweeper (React Migration)",
-      description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
-      author: "Uzenkova Daria",
-      link: "/uzenkova-daria", 
-      difficulty: "Intermediate",
-      status: "Complete"
-    }
+    },
+    {
       id: 15,
       title: "Minesweeper - Prohvatilov Anton",
       description: "Lab 5 implementation using React and CSS Modules.",
       author: "Prohvatilov Anton",
       link: "/prohvatilov-anton",
       difficulty: "Intermediate",
-      status: "In Progress"
+      status: "In Progress",
+    },
+        {
+      id: 77, 
+      title: 'Minesweeper',
+      description:'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
+      author: 'Buchka Mykyta',
+      link: '/buchka-mykyta', 
+      difficulty: 'Intermediate', 
+      status: 'Complete'
     }
-
   ]
 
   const getStatusColor = (status) => {
@@ -127,23 +128,14 @@ function Game() {
             <p className={styles.author}>by {impl.author}</p>
             <p className={styles.description}>{impl.description}</p>
             <div className={styles.cardActions}>
-              {impl.link.startsWith('/') ? (
-                <a
-                  href={impl.link}
-                  className={styles.linkBtn}
-                >
-                  View Implementation →
-                </a>
-              ) : (
-                <a
-                  href={impl.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.linkBtn}
-                >
-                  View Implementation →
-                </a>
-              )}
+              <a
+                href={impl.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.linkBtn}
+              >
+                View Implementation →
+              </a>
             </div>
           </div>
         ))}
