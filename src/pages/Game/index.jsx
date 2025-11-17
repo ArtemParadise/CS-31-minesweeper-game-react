@@ -56,15 +56,8 @@ function Game() {
       link: "/uzenkova-daria", 
       difficulty: "Intermediate",
       status: "Complete"
-    }
-      id: 5, 
-      title: "Minesweeper (React Migration)",
-      description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
-      author: "Uzenkova Daria",
-      link: "/uzenkova-daria", 
-      difficulty: "Intermediate",
-      status: "Complete"
-    }
+    },
+    {
       id: 15,
       title: "Minesweeper - Prohvatilov Anton",
       description: "Lab 5 implementation using React and CSS Modules.",
@@ -72,7 +65,18 @@ function Game() {
       link: "/prohvatilov-anton",
       difficulty: "Intermediate",
       status: "In Progress"
-    }
+    },
+    {
+      id: 17,
+      title: "Minesweeper - Kovalov Andrii",
+      description:
+        "A React migration of the classic game using components, state management, and CSS Modules.",
+      author: "Kovalov Andrii",
+      link: "/kovalov-andrii", 
+      difficulty: "Intermediate",
+      status: "Complete",
+    },
+
 
   ]
 
