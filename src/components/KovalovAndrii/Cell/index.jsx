@@ -1,6 +1,5 @@
 import styles from './Cell.module.css';
-// Убедись, что путь к utils правильный
-import { CELL_STATE } from '../../KovalovAndrii/utils';
+import { CELL_STATE } from '../utils';
 
 export default function Cell({ cell, row, col, onLeftClick, onRightClick }) {
   const handleClick = () => {
@@ -8,53 +7,64 @@ export default function Cell({ cell, row, col, onLeftClick, onRightClick }) {
   };
 
   const handleRight = (event) => {
-    event.preventDefault(); // Отменяем стандартное контекстное меню
+    event.preventDefault(); 
     onRightClick(row, col);
   };
 
-  // --- Определение стилей и контента ---
-  let cellClass = styles.cell;
-  let content = ''; // По умолчанию контента нет
+  const getCellClasses = () => {
+    // Всегда есть базовый класс
+    const classes = [styles.cell];
 
-  switch (cell.state) {
-    case CELL_STATE.OPEN:
-      cellClass += ' ' + styles.open;
-      if (cell.hasMine) {
-        cellClass += ' ' + styles.mine; // CSS добавит '💣'
-      } else if (cell.neighborMines > 0) {
-        content = cell.neighborMines; // Показываем цифру
+    switch (cell.state) {
+      case CELL_STATE.OPEN:
+        classes.push(styles.open); // Добавляем 'open'
+        if (cell.hasMine) {
+          classes.push(styles.mine); // Добавляем 'mine'
+        } else if (cell.neighborMines > 0) {
+          // Добавляем класс для цифры (number1, number2...)
+          classes.push(styles['number' + cell.neighborMines]);
+        }
+        break;
 
-        // 👇🔥 ВОТ ИЗМЕНЕНИЕ:
-        // Добавляем класс .number1, .number2 и т.д.
-        cellClass += ` ${styles['number' + cell.neighborMines]}`;
-      }
-      break;
+      case CELL_STATE.FLAG:
+        classes.push(styles.flag);
+        break;
 
-    case CELL_STATE.FLAG:
-      cellClass += ' ' + styles.flag; // CSS добавит '🚩'
-      break;
+      case CELL_STATE.INCORRECT_FLAG:
+        classes.push(styles.incorrectFlag);
+        break;
 
-    case CELL_STATE.INCORRECT_FLAG:
-      cellClass += ' ' + styles.incorrectFlag; // CSS добавит '❌'
-      break;
+      case CELL_STATE.MINE_HIT:
+        classes.push(styles.mineHit);
+        break;
 
-    case CELL_STATE.MINE_HIT:
-      cellClass += ' ' + styles.mineHit; // CSS добавит '💥'
-      break;
+      case CELL_STATE.CLOSED:
+      default:
+        classes.push(styles.closed);
+        break;
+    }
 
-    case CELL_STATE.CLOSED:
-    default:
-      cellClass += ' ' + styles.closed;
-      break;
+    // Собираем все классы из массива в одну строку
+    return classes.join(' ');
+  };
+
+  // --- Определение содержимого ячейки ---
+  let content = '';
+  if (
+    cell.state === CELL_STATE.OPEN &&
+    !cell.hasMine &&
+    cell.neighborMines > 0
+  ) {
+    content = cell.neighborMines; // Показываем ТОЛЬКО цифры
   }
 
   return (
     <div
-      className={cellClass}
+      className={getCellClasses()} // Вызываем нашу новую функцию
       onClick={handleClick}
       onContextMenu={handleRight}
     >
-      {content} {/* Показываем ТОЛЬКО цифры */}
+      {content}
     </div>
   );
 }

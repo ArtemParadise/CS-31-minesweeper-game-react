@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import styles from './Timer.module.css';
+import { GAME_STATUS } from '../utils';
 
 export default function Timer({ time, setTime, status }) {
   useEffect(() => {
-    // Запускаем таймер, только если игра идет
-    if (status !== 'playing') {
+    if (status !== GAME_STATUS.PLAYING) {
       return;
     }
 
@@ -12,9 +12,9 @@ export default function Timer({ time, setTime, status }) {
       setTime((prevTime) => prevTime + 1);
     }, 1000);
 
-    // Очистка интервала при размонтировании или остановке игры
+    // Очистка интервала
     return () => clearInterval(intervalId);
-  }, [status, setTime]); // Перезапускаем эффект, если меняется статус игры
+  }, [status, setTime]);
 
   const minutes = Math.floor(time / 60)
     .toString()
