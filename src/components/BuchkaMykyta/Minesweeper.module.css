@@ -1,0 +1,204 @@
+/* CSS Custom variables for consistent color scheme throughout the game */
+:root {
+  --bg: #3b3f44;
+  --panel: #4b4f54;
+  --tile: #6b6f73;
+  --tile-dark: #5a5e62;
+  --tile-light: #82878b;
+  --flag: #d9534f;
+  --mine: #111;
+  --bdr-radius-game: 6px;
+}
+
+/* Base styles for all elements - consistent fonts and rounded corners */
+* {
+  box-sizing: border-box;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main game container with border and gradient background */
+.game {
+  display: inline-block;
+  background: linear-gradient(#51565b, #3d4145);
+  padding: 12px;
+  border-radius: 9px;
+  border: 6px solid #2a2d30;
+  margin: 0 auto;
+}
+
+/* Top toolbar containing mine counter, reset button and timer */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* LED-style display for mine counter and timer */
+.counter {
+  background: #170b0b;
+  color: #ff4d4d;
+  padding: 6px 10px;
+  font-weight: 700;
+  border-radius: 4px;
+  min-width: 56px;
+  text-align: center;
+}
+
+/* Reset/emoji button styling */
+.smiley {
+  width: 56px;
+  height: 40px;
+  border-radius: 6px;
+  background: #d7d7d7;
+  border: 2px solid #999;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* Центрує по горизонталі */
+  align-items: center; /* Центрує по вертикалі */
+}
+
+/* Game board grid container */
+.board {
+  background: linear-gradient(#5a6066, #3f4448);
+  padding: 8px;
+  border-radius: 4px;
+  display: grid;
+  grid-gap: 0px;
+  justify-content: center;
+}
+
+/* Individual cell styling - default covered state */
+.cell {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background: linear-gradient(#8d9398, #64686c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2b2f33;
+  color: #0b58b9;
+  font-weight: 700;
+  user-select: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Revealed cell appearance */
+.cell.uncovered {
+  background: linear-gradient(#bfc4c8, #a6abad);
+  box-shadow: inset 0 0 0 2px #d9dce0;
+}
+
+/* Mine cell styling */
+.cell.mine {
+  background: linear-gradient(#2b2b2b, #000);
+  color: #000;
+}
+
+/* Exploded mine appearance */
+.cell.exploded {
+  background: linear-gradient(#ff0000, #cc0000);
+  color: #000;
+}
+
+/* Flagged cell appearance */
+.cell.flag {
+  color: var(--flag);
+}
+
+/* Incorrectly flagged cell style */
+.cell.wrongFlag {
+  background: linear-gradient(#ff0000, #cc0000);
+}
+
+/* Style for disabled cells after game over */
+.cell.disabled {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Bottom section styling */
+.footer {
+  margin-top: 8px;
+}
+
+/* Game controls container */
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: #cfcfcf;
+}
+
+.controls input {
+  width: 50px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background: #333;
+  color: #fff;
+}
+
+.newGameBtn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background: #4a4a4a;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.newGameBtn:hover {
+  background: #5a5a5a;
+}
+
+/* Game instructions text */
+.hint {
+  color: #cfcfcf;
+  margin-top: 8px;
+  font-size: 0.9em;
+}
+
+/* Game instructions text */
+.hint {
+  color: #cfcfcf;
+  margin-top: 8px;
+  font-size: 0.9em;
+}
+
+/* Different colors for numbers 1-8 indicating adjacent mines */
+.cell.number1 {
+  color: #0b58b9;
+}
+.cell.number2 {
+  color: #169347;
+}
+.cell.number3 {
+  color: #d8602b;
+}
+.cell.number4 {
+  color: #1a2b7b;
+}
+.cell.number5 {
+  color: #7b1a1a;
+}
+.cell.number6 {
+  color: #169394;
+}
+.cell.number7 {
+  color: #111;
+}
+.cell.number8 {
+  color: #555;
+}

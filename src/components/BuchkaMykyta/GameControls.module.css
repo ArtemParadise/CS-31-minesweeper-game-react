@@ -1,0 +1,54 @@
+/* Game controls container */
+.footer {
+  margin-top: 8px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #cfcfcf;
+}
+
+.controls input {
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background: #3b3f44;
+  color: #cfcfcf;
+  width: 50px;
+}
+
+.controls button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background: #5b6066;
+  color: #cfcfcf;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.controls button:hover {
+  background: #6b7076;
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+
+/* Game instructions text */
+.hint {
+  color: #cfcfcf;
+  margin-top: 8px;
+  margin: 8px 0 0 0;
+  font-size: 0.9rem;
+}

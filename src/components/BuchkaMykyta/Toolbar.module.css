@@ -1,0 +1,8 @@
+/* Top toolbar containing mine counter, reset button and timer */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 10px;
+}
