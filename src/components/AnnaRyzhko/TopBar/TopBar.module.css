@@ -1,0 +1,66 @@
+.topbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(180deg, rgba(102, 155, 188, 0.10), rgba(102, 155, 188, 0.06));
+    border: 1px solid rgba(102, 155, 188, 0.35);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 14px;
+}
+
+.counter,
+.timer {
+    font-size: 1.2rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #FDF0D5;
+    background: rgba(102, 155, 188, 0.12);
+    border: 1px solid rgba(102, 155, 188, 0.35);
+    padding: 8px 12px;
+    border-radius: 12px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+    min-width: 65px;
+    text-align: center;
+}
+
+.counter {
+    justify-self: start;
+}
+
+.timer {
+    justify-self: end;
+}
+
+.startBtn {
+    background: linear-gradient(180deg, rgba(102, 155, 188, 0.6), rgba(2, 52, 78, 0.773));
+    color: #FDF0D5;
+    border: 1px solid rgba(102, 155, 188, 0.75);
+    font-weight: 800;
+    font-size: 1.4rem;
+    padding: 10px 36px;
+    width: 160px;
+    border-radius: 12px;
+    letter-spacing: .5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25), inset 0 1px 0 rgba(255, 255, 255, .06);
+    cursor: pointer;
+    transition: transform .06s ease, box-shadow .15s ease, background .15s ease;
+    text-shadow: 0 1px 0 rgba(70, 69, 69, 0.45);
+}
+
+.startBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+.startBtn:active {
+    transform: translateY(0);
+}
+
+.restart {
+    background: linear-gradient(180deg, rgba(193, 18, 31, 0.45), rgba(120, 0, 0, 0.6));
+    border-color: rgba(193, 18, 31, 0.75);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
+}
