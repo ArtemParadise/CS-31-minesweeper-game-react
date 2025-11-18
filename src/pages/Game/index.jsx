@@ -66,7 +66,7 @@ function Game() {
       difficulty: "Intermediate",
       status: "In Progress",
     },
-        {
+    {
       id: 77, 
       title: 'Minesweeper',
       description:'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
