@@ -40,24 +40,31 @@ function Game() {
       status: "Planning"
     },
     {
-      id: 42,
+      id: 42, 
       title: 'Minesweeper',
-      description: 'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
+      description:'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
       author: 'Maksym Maliutin',
-      link: '/maliutin-maksym',
-      difficulty: 'Intermediate',
+      link: '/maliutin-maksym', 
+      difficulty: 'Intermediate', 
       status: 'Complete',
     },
     {
-      id: 5,
+      id: 5, 
       title: "Minesweeper (React Migration)",
       description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
       author: "Uzenkova Daria",
-      link: "/uzenkova-daria",
+      link: "/uzenkova-daria", 
       difficulty: "Intermediate",
       status: "Complete"
-    },
-    {
+    }
+      id: 5, 
+      title: "Minesweeper (React Migration)",
+      description: "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
+      author: "Uzenkova Daria",
+      link: "/uzenkova-daria", 
+      difficulty: "Intermediate",
+      status: "Complete"
+    }
       id: 15,
       title: "Minesweeper - Prohvatilov Anton",
       description: "Lab 5 implementation using React and CSS Modules.",
@@ -65,15 +72,6 @@ function Game() {
       link: "/prohvatilov-anton",
       difficulty: "Intermediate",
       status: "In Progress"
-    },
-    {
-      id: 10,
-      title: "Minesweeper (React Migration)",
-      description: "Lab 5 implementation using React and CSS Modules.",
-      author: "Anna Ryzhko",
-      link: "/anna-ryzhko",
-      difficulty: "Intermediate",
-      status: "Complete"
     }
 
   ]
