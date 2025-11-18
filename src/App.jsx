@@ -20,7 +20,7 @@ function App() {
         <Route path="maliutin-maksym" element={<MaliutinMaksymGame />} />
         <Route path="uzenkova-daria" element={<UzenkovaDaria />} />
         <Route path="prohvatilov-anton" element={<ProhvatilovAntonGame />} />
-          <Route path="buchka-mykyta" element={<BuchkaMykyta />} />
+        <Route path="buchka-mykyta" element={<BuchkaMykyta />} />
       </Route>
     </Routes>
   )
