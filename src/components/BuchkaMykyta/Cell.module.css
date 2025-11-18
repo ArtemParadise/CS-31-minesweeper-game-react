@@ -1,0 +1,88 @@
+/* Cell styling */
+.cell {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background: linear-gradient(#8d9398, #64686c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2b2f33;
+  color: #0b58b9;
+  font-weight: 700;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.cell:hover:not(.uncovered):not(.disabled) {
+  background: linear-gradient(#9da3a8, #74787c);
+}
+
+/* Revealed cell appearance */
+.cell.uncovered {
+  background: linear-gradient(#bfc4c8, #a6abad);
+  box-shadow: inset 0 0 0 2px #d9dce0;
+  cursor: default;
+}
+
+/* Mine cell styling */
+.cell.mine {
+  background: linear-gradient(#2b2b2b, #000);
+  color: #000;
+}
+
+/* Exploded mine appearance */
+.cell.exploded {
+  background: linear-gradient(#ff0000, #cc0000);
+  color: #000;
+}
+
+/* Flagged cell appearance */
+.cell.flag {
+  color: #d9534f;
+}
+
+/* Incorrectly flagged cell style */
+.cell.wrongFlag {
+  background: linear-gradient(#ff0000, #cc0000);
+}
+
+/* Disabled cells after game over */
+.cell.disabled {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Number colors for adjacent mines */
+.cell.number1 {
+  color: #0b58b9;
+}
+
+.cell.number2 {
+  color: #169347;
+}
+
+.cell.number3 {
+  color: #d8602b;
+}
+
+.cell.number4 {
+  color: #1a2b7b;
+}
+
+.cell.number5 {
+  color: #7b1a1a;
+}
+
+.cell.number6 {
+  color: #169394;
+}
+
+.cell.number7 {
+  color: #111;
+}
+
+.cell.number8 {
+  color: #555;
+}

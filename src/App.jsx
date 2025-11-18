@@ -4,11 +4,11 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Game from './pages/Game'
 import MockGame from './pages/MockGame'
-import MaliutinMaksymGame from './pages/MaliutinMaksym';
+import MaliutinMaksymGame from './pages/MaliutinMaksym'
 import UzenkovaDaria from './pages/UzenkovaDaria'
 import ProhvatilovAntonGame from './pages/ProhvatilovAnton'
 import BuchkaMykyta from './pages/BuchkaMykyta'
-import MalenchukMarynaPage from "./pages/MalenchukMaryna";
+import MalenchukMarynaPage from "./pages/MalenchukMaryna"
 
 function App() {
   return (
@@ -28,4 +28,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

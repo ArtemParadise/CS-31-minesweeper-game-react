@@ -29,6 +29,8 @@ body {
   min-height: 100vh;
   background-color: #0a0a0a;
   color: #e0e0e0;
+  background: linear-gradient(#2e3135, #202224);
+  position: relative;
 }
 
 h1 {
@@ -81,9 +83,4 @@ code {
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
-}
-
-html,
-body {
-  overflow-x: hidden;
 }
