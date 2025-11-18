@@ -1,0 +1,7 @@
+.board {
+  display: grid;
+  gap: 2px; /* Расстояние между ячейками */
+  background: #b0b0b0; /* Фон "сетки" */
+  padding: 4px;
+  border-radius: 4px;
+}

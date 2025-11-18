@@ -1,0 +1,82 @@
+.cell {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.closed {
+  background-color: #cfd8dc;
+  border: 1px solid #b0bec5;
+}
+
+.open {
+  background-color: #ffffff;
+  border: 1px solid #90a4ae;
+}
+
+.flag {
+  background-color: #dcedc8;
+  border: 1px solid #8bc34a;
+}
+.flag::after {
+  content: '🚩';
+}
+
+.mine {
+  background-color: #ffebee; /* Обычная раскрытая мина */
+  border: 1px solid #ef9a9a;
+}
+.mine::after {
+  content: '💣';
+}
+
+/* Мина, на которую ты нажал */
+.mineHit {
+  background-color: #ffebee; 
+  border: 1px solid #ef9a9a;
+}
+.mineHit::after {
+  content: '💥';
+  color: #fff; /* Можно еще и цвет самого смайлика сделать белым, чтобы он был еще контрастнее */
+}
+
+/* Неправильно поставленный флаг */
+.incorrectFlag {
+  background-color: #fdebd0;
+  border: 1px solid #f39c12;
+}
+.incorrectFlag::after {
+  content: '❌';
+}
+
+.number1 {
+  color: #0000ff;
+} /* 1: Синий */
+.number2 {
+  color: #008000;
+} /* 2: Зеленый */
+.number3 {
+  color: #ff0000;
+} /* 3: Красный */
+.number4 {
+  color: #000080;
+} /* 4: Темно-синий */
+.number5 {
+  color: #800000;
+} /* 5: Бордовый */
+.number6 {
+  color: #008080;
+} /* 6: Бирюзовый */
+.number7 {
+  color: #000000;
+} /* 7: Черный */
+.number8 {
+  color: #808080;
+} /* 8: Серый */

@@ -1,0 +1,35 @@
+.topPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Это выровняет элементы по вертикали */
+  margin-bottom: 10px;
+  font-size: 20px;
+
+  /* === НОВЫЕ СТИЛИ === */
+  background-color: #333; /* Темный фон для панели */
+  padding: 10px 15px; /* Внутренние отступы */
+  border-radius: 8px; /* Скругленные углы */
+  border: 2px solid #555; /* Небольшая рамка */
+}
+
+.flags {
+  font-size: 20px;
+  font-weight: bold;
+
+  /* === НОВЫЙ ЦВЕТ === */
+  color: #3498db; /* Яркий синий цвет */
+}
+
+.button {
+  background: #fa85e1;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold; /* Добавим жирности */
+}
+
+.button:hover {
+  background: #f060c5;
+}
