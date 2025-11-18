@@ -19,6 +19,33 @@ export default function Game() {
       link: "/malenchuk-maryna",
       difficulty: "Intermediate",
       status: "Complete"
+    },
+    {
+      id: 15,
+      title: "Minesweeper - Prohvatilov Anton",
+      description: "Lab 5 implementation using React and CSS Modules.",
+      author: "Prohvatilov Anton",
+      link: "/prohvatilov-anton",
+      difficulty: "Intermediate",
+      status: "In Progress",
+    },
+    {
+      id: 77, 
+      title: 'Minesweeper',
+      description:'A complete migration of the vanilla JS game to React, using components, hooks, and CSS modules.',
+      author: 'Buchka Mykyta',
+      link: '/buchka-mykyta', 
+      difficulty: 'Intermediate', 
+      status: 'Complete'
+    },
+    {
+      id: 23,
+      title: "Minesweeper (React + CSS Modules)",
+      description: "Компоненти: Board/Cell/Toolbar/Modal. Безпечний перший клік, акорд, рекорди.",
+      author: "Malenchuk Maryna",
+      link: "/malenchuk-maryna",
+      difficulty: "Intermediate",
+      status: "Complete"
     }
   ];
 
