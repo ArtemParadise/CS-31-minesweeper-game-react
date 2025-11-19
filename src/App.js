@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Minesweeper from './components/Siller/Minesweeper';
+import Minesweeper from './components/Siller/Minesweeper.jsx';
 
 function App() {
   return (
