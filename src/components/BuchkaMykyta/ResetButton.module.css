@@ -1,0 +1,19 @@
+/* Reset/emoji button styling */
+.smiley {
+  width: 56px;
+  height: 40px;
+  border-radius: 6px;
+  background: #d7d7d7;
+  border: 2px solid #999;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.smiley:hover {
+  background: #e7e7e7;
+}
+
+.smiley:active {
+  transform: scale(0.95);
+}
