@@ -60,12 +60,12 @@ function Game() {
       status: "Complete",
     },
     {
-      id: 5,
+      id: 10,
       title: "Olena Siller - Minesweeper (React Migration)",
       description:
         "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
       author: "Olena Siller",
-      link: "/olena-siller",
+      link: "/siller-olena",
       difficulty: "Intermediate",
       status: "Complete",
     },
