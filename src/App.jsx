@@ -7,6 +7,7 @@ import MockGame from "./pages/MockGame";
 import MaliutinMaksymGame from "./pages/MaliutinMaksym";
 import UzenkovaDaria from "./pages/UzenkovaDaria";
 import ProhvatilovAntonGame from "./pages/ProhvatilovAnton";
+import AnnaRyzhko from './pages/AnnaRyzhko';
 import BuchkaMykyta from "./pages/BuchkaMykyta";
 import MalenchukMarynaPage from "./pages/MalenchukMaryna";
 import MinesweeperSiller from "./components/SillerOlena/Minesweeper";
@@ -22,6 +23,7 @@ function App() {
         <Route path="maliutin-maksym" element={<MaliutinMaksymGame />} />
         <Route path="uzenkova-daria" element={<UzenkovaDaria />} />
         <Route path="prohvatilov-anton" element={<ProhvatilovAntonGame />} />
+        <Route path="anna-ryzhko" element={<AnnaRyzhko />} />
         <Route path="buchka-mykyta" element={<BuchkaMykyta />} />
         <Route path="malenchuk-maryna" element={<MalenchukMarynaPage />} />
         <Route path="siller-olena" element={<MinesweeperSiller />} />
