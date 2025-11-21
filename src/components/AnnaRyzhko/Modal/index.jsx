@@ -21,7 +21,13 @@ const Modal = ({ isVisible, status, time, onRestart, onClose }) => {
             <div className={`${styles.messageBox} ${boxClass}`}>
                 <button className={styles.closeBtn} onClick={onClose}>✕</button>
                 <h2>{title}</h2>
-                <p dangerouslySetInnerHTML={{ __html: message }}></p>
+                <p>
+                    {isWin ? (
+                        <>You cleared the field in <strong>{time}</strong>!</>
+                    ) : (
+                        <>You hit a mine. Time: <strong>{time}</strong>. Try again!</>
+                    )}
+                </p>
                 <button className={styles.restartBtn} onClick={onRestart}>Play again</button>
             </div>
         </div>
