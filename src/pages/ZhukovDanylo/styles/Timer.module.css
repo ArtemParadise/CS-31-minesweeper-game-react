@@ -1,0 +1,13 @@
+.timer {
+  background: #330000;
+  color: #ff2d2d;
+  padding: 8px 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  min-width: 56px;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px #1a0000aa inset;
+  border: 2px solid #7a1a1a;
+}
