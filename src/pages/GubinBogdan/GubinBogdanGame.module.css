@@ -1,0 +1,93 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(66, 60, 71);
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(104, 103, 100);
+  border-radius: 10px;
+  border: 5px ridge rgb(211, 177, 147);
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.timerStartIndicator {
+  display: inline-block;
+  background-color: rgb(67, 49, 49);
+  color: rgb(255, 11, 11);
+  border-radius: 10px;
+  border: 2px ridge rgb(211, 177, 147);
+  padding: 5px 10px;
+  min-width: 60px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 3px;
+  width: 450px;
+  height: 370px;
+  margin: 10px auto;
+  background-color: rgb(104, 103, 100);
+  border: 5px ridge rgb(211, 177, 147);
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: monospace;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.closed { background: #94a3b8; }
+.opened { background: #e2e8f0; color: #1e293b; border: 1px solid #cbd5e1; }
+.flag-on-mine { background: #f59e0b; }
+.flag-wrong { background: #b91c1c; }
+.mine { background: #ef4444; }
+.mine-clicked { background: #7f1d1d; }
+.empty { background: #030404; color: transparent; }
+
+#start-btn {
+  background: rgb(67, 49, 49);
+  color: rgb(255, 11, 11);
+  border: none;
+  border-radius: 8px;
+  padding: 5px 15px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+#start-btn:hover {
+  background: rgb(90, 70, 70);
+  transform: scale(1.05);
+}
+
+#start-btn:active {
+  transform: scale(0.95);
+}

@@ -98,6 +98,16 @@ function Game() {
       difficulty: "Intermediate",
       status: "Complete",
     },
+    {
+      id: 100,
+      title: "Minesweeper",
+      description:
+        "My React implementation of Minesweeper using components and CSS Modules.",
+      author: "Gubin Bogdan",
+      link: "/gubin-bogdan",
+      difficulty: "Intermediate",
+      status: "Complete",
+    },
   ];
 
   const getStatusColor = (status) => {
