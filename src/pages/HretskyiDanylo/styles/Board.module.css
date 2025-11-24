@@ -1,0 +1,17 @@
+/* src/pages/HretskyiDanylo/styles/Board.module.css */
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: calc(var(--cols) * var(--cell-size));
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px var(--neon-cyan), 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--neon-cyan);
+  background: var(--synth-dark);
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
