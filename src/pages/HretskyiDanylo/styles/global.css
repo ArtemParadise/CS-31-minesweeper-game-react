@@ -1,0 +1,39 @@
+/* src/pages/HretskyiDanylo/styles/global.css */
+/* Базові шрифти та змінні – ВЗЯТО з оригінального style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* MIAMI RETRO WAVE COLORS */
+  --neon-pink: #ff0080;
+  --neon-cyan: #00ffff;
+  --neon-purple: #8000ff;
+  --neon-yellow: #ffff00;
+  --neon-orange: #ff4000;
+  --neon-green: #00ff80;
+  --neon-blue: #0080ff;
+  --neon-red: #ff0040;
+  --synth-dark: #0a0a0a;
+  --synth-darker: #1a1a2e;
+  --synth-blue: #16213e;
+  --synth-purple: #0f3460;
+  --synth-light: #e94560;
+  --retro-bg: #1a1a2e;
+  --retro-accent: #e94560;
+  --retro-secondary: #0f3460;
+  --retro-highlight: #00ffff;
+  --retro-text: #ffffff;
+  --retro-shadow: #000000;
+  --white: #ffffff;
+  --black: #000000;
+  --silver: #808080;
+
+  /* board sizing */
+  --cols: 10;
+  --rows: 10;
+  --cell-size: min(56px, calc((96vw - 32px) / var(--cols)));
+  --header-min-h: 64px;
+
+  --focus: var(--retro-highlight);
+}
+

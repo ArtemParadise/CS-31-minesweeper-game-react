@@ -98,6 +98,16 @@ function Game() {
       difficulty: "Intermediate",
       status: "Complete",
     },
+    {
+      id: 67,
+      title: "Cactus`sweeper - Hretskyi Danylo",
+      description:
+        "Migrated version of cactus'sweeper game to React, using components, hooks, and CSS Modules.",
+      author: "Hretskyi Danylo",
+      link: "/hretskyi-danylo",
+      difficulty: "Intermediate",
+      status: "Complete",
+    },
   ];
 
   const getStatusColor = (status) => {
