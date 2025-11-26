@@ -60,7 +60,7 @@ function Game() {
       status: "Complete",
     },
     {
-      id: 5,
+      id: 6,
       title: "Olena Siller - Minesweeper (React Migration)",
       description:
         "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
@@ -95,6 +95,16 @@ function Game() {
         "Компоненти: Board/Cell/Toolbar/Modal. Безпечний перший клік, акорд, рекорди.",
       author: "Malenchuk Maryna",
       link: "/malenchuk-maryna",
+      difficulty: "Intermediate",
+      status: "Complete",
+    },
+    {
+      id: 18,
+      title: "Minesweeper (React Migration)",
+      description:
+        "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
+      author: "Khudaieva Valeriia",
+      link: "/khudaieva-valeriia",
       difficulty: "Intermediate",
       status: "Complete",
     },
