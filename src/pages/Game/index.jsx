@@ -98,6 +98,16 @@ function Game() {
       difficulty: "Intermediate",
       status: "Complete",
     },
+    {
+      id: 18,
+      title: "Minesweeper (React Migration)",
+      description:
+        "A complete migration of the original JS game to React, using components, hooks, and CSS Modules.",
+      author: "Khudaieva Valeriia",
+      link: "/khudaieva-valeriia",
+      difficulty: "Intermediate",
+      status: "Complete",
+    },
   ];
 
   const getStatusColor = (status) => {

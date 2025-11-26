@@ -1,0 +1,18 @@
+/* src/components/KhudaievaValeriia/RestartButton.module.css */
+
+.startBtn {
+    /* Стилі .start-btn */
+    font-size: 22px;
+    background: #c0ffb3;
+    color: #4a0066;
+    border: 2px solid #4a0066;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 5px 10px; 
+}
+
+.startBtn:hover {
+    background: #9affb0;
+    transform: scale(1.05);
+}

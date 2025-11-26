@@ -10,6 +10,7 @@ import ProhvatilovAntonGame from "./pages/ProhvatilovAnton";
 import BuchkaMykyta from "./pages/BuchkaMykyta";
 import MalenchukMarynaPage from "./pages/MalenchukMaryna";
 import MinesweeperSiller from "./components/SillerOlena/Minesweeper";
+import KhudaievaValeriia from "./pages/KhudaievaValeriia";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="buchka-mykyta" element={<BuchkaMykyta />} />
         <Route path="malenchuk-maryna" element={<MalenchukMarynaPage />} />
         <Route path="siller-olena" element={<MinesweeperSiller />} />
+        <Route path="khudaieva-valeriia" element={<KhudaievaValeriia />} />
       </Route>
     </Routes>
   );

@@ -1,0 +1,30 @@
+/* src/components/KhudaievaValeriia/GameStatusMessage.module.css */
+
+.statusMessage {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 100px; 
+    
+    width: 300px;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    cursor: pointer; 
+    z-index: 10; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.winMessage {
+    background: linear-gradient(45deg, #4CAF50, #79ff7d); 
+    border: 3px solid #38783a;
+}
+
+.loseMessage {
+    background: linear-gradient(45deg, #ff5fc9, #ff1e8a);
+    border: 3px solid #9c2c24;
+}

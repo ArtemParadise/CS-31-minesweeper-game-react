@@ -1,0 +1,52 @@
+/* src/components/KhudaievaValeriia/Cell.module.css */
+
+@keyframes pulse {
+    from { box-shadow: 0 0 8px #ff5fc9; }
+    to   { box-shadow: 0 0 20px #ff1e8a; }
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.closed {
+    background: #66ff99;
+    box-shadow: inset -2px -2px #3bb56f, inset 2px 2px #9affc1;
+}
+
+.open {
+    background: linear-gradient(135deg, #a866ff, #7a33ff);
+    color: #fff;
+    box-shadow: inset -2px -2px #5a0099, inset 2px 2px #c8a8ff;
+}
+
+.mine {
+    background: #ff8ad6;
+    color: #660033;
+    box-shadow: inset 0 0 10px #ff3ba2;
+}
+
+.exploded {
+    background: #ff4bbd;
+    color: #fff;
+    box-shadow: 0 0 15px #ff1e8a, inset 0 0 10px #ff0080;
+    animation: pulse 0.8s infinite alternate;
+}
+
+.flag {
+    background-color: #4b0082; 
+    color: white; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; 
+}

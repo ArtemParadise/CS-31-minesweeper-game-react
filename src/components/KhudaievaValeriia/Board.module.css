@@ -1,0 +1,13 @@
+/* src/components/KhudaievaValeriia/Board.module.css */
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 35px);
+    grid-auto-rows: 35px;
+    gap: 3px;
+    background: #4a0066;
+    padding: 6px;
+    border: 3px solid #4a0066;
+    border-radius: 15px;
+    width: fit-content;
+}
