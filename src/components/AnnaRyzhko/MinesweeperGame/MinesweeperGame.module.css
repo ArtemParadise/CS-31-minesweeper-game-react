@@ -1,0 +1,57 @@
+:root {
+    --blue-900: #002335;
+    --red-600: #C1121F;
+    --beige: #FDF0D5;
+    --sky-500: #669BBC;
+    --bg-gray: #1c2125;
+}
+
+.gameContainer * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 10px;
+    background-color: var(--bg-gray);
+    background:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='rgba(255,255,255,0.05)'><circle cx='20' cy='20' r='2'/></svg>"),
+        var(--bg-gray);
+    color: var(--beige);
+}
+
+.title {
+    text-align: center;
+    margin: 0 0 18px;
+    font-size: clamp(22px, 2.4vw, 34px);
+    font-weight: 800;
+    letter-spacing: .3px;
+    color: var(--beige);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+
+.panel {
+    width: fit-content;
+    margin: 0 auto 36px;
+    background: rgba(0, 35, 53, 0.65);
+    border: 2px solid var(--blue-900);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .03);
+    padding: 14px;
+}
+
+@media (max-width: 600px) {
+    .panel {
+        width: 100%;
+        max-width: 95vw;
+    }
+}
