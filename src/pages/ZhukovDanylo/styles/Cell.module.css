@@ -1,0 +1,71 @@
+.cell {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #4d0a0a 60%, #7a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #330000;
+  color: #ffffff;
+  font-weight: 700;
+  user-select: none;
+  font-size: 1.1rem;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+  cursor: pointer;
+}
+
+.cellRevealed {
+  background: linear-gradient(135deg, #7a1a1a 60%, #330000 100%);
+  box-shadow: 0 0 6px #ff2d2d55 inset;
+  color: #ffffff;
+}
+
+.cellMine {
+  background: linear-gradient(135deg, #000000 60%, #7a1a1a 100%);
+  color: #ff2d2d;
+}
+
+.cellFlag {
+  color: #ff2d2d;
+  text-shadow: 0 0 4px #ff2d2d88;
+}
+
+/* Кольори чисел */
+
+.cellNumber1 {
+  color: #ff6f6f;
+  text-shadow: 0 0 4px #ff2d2d88;
+}
+
+.cellNumber2 {
+  color: #ffbaba;
+}
+
+.cellNumber3 {
+  color: #ff2d2d;
+}
+
+.cellNumber4 {
+  color: #ff8c8c;
+}
+
+.cellNumber5 {
+  color: #ffffff;
+}
+
+.cellNumber6 {
+  color: #ff2d2d;
+  font-weight: 900;
+}
+
+.cellNumber7 {
+  color: #ffffff;
+}
+
+.cellNumber8 {
+  color: #7a1a1a;
+}

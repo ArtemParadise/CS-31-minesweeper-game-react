@@ -98,6 +98,16 @@ function Game() {
       difficulty: "Intermediate",
       status: "Complete",
     },
+    {
+      id: 24,
+      title: "Minesweeper - Zhukov Danylo",
+      description:
+        "Було створено персональний модуль гри з компонентною структурою Minesweeper/Board/Cell/GameStatus/Timer/RestartButton.",
+      author: "Zhukov Danylo",
+      link: "/zhukov-danylo",
+      difficulty: "Intermediate",
+      status: "Complete",
+    },
   ];
 
   const getStatusColor = (status) => {
