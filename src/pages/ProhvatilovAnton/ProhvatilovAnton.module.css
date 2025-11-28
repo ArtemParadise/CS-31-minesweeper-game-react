@@ -1,0 +1,198 @@
+:root {
+  --main-bg: #e0e5ec;
+  --card-bg: #f0f2f5;
+  --cell-closed-bg: #a5a5a5;
+  --cell-open-bg: #d0d0d0;
+  --cell-empty-bg: #e8e8e8;
+  --text-dark: #333;
+  --text-light: #fefefe;
+  --border-dark: #666;
+  --border-light: #ffffff;
+  --border-subtle: #c8c8c8;
+  --number1-color: #007bff;
+  --number2-color: #28a745;
+  --number3-color: #dc3545;
+  --mine-color: #e74c3c;
+  --flag-color: #f39c12;
+  --win-color: #28a745;
+  --lose-color: #c0392b;
+  --header-bg: #ffffff;
+  --header-item-bg: #e0e5ec;
+  --button-bg: #007bff;
+  --button-hover-bg: #0056b3;
+  --shadow-inset-light: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+  --shadow-inset-dark: inset 2px 2px 5px #8d96a0, inset -3px -3px 7px #d0d5db;
+  --shadow-soft: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  --shadow-flat: 0 4px 8px rgba(0,0,0,0.1);
+  --border-radius-large: 12px;
+  --border-radius-medium: 8px;
+  --border-radius-small: 4px;
+  --font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+}
+
+.gameBoardWrapper {
+  width: 1000px;
+  height: auto;
+  margin: 2rem auto;
+  
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--border-radius-large);
+  padding: 25px; 
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.gameBoardWrapper h1 {
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.gameBoardHeader {
+  width: 950px;
+  height: 70px;
+  margin: 0 auto 25px auto;
+
+  border-radius: var(--border-radius-medium);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--header-bg);
+  box-shadow: var(--shadow-flat);
+  padding: 0 10px;
+}
+
+.gameBoardScore,
+.gameBoardTimer {
+  width: 120px;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: var(--border-radius-small);
+  background-color: var(--header-item-bg);
+  color: var(--text-dark);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-inset-light);
+  font-family: 'Roboto Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.flagsEmpty {
+  background-color: var(--flag-color);
+  color: var(--text-light);
+  box-shadow: var(--shadow-inset-dark);
+}
+
+.gameBoardButton {
+  width: 60px;
+  height: 60px;
+  font-size: 2.5rem;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameBoardButton:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.gameBoardButton:active {
+  background-color: var(--button-hover-bg);
+  box-shadow: var(--shadow-inset-light);
+  transform: translateY(1px);
+}
+
+.gameBoard {
+  width: 950px;
+  height: 950px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-small);
+  background: var(--card-bg);
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  box-shadow: var(--shadow-inset-light);
+  padding: 2px;
+}
+
+.cell {
+  font-size: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-small);
+  background: var(--cell-open-bg);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  user-select: none;
+  transition: background-color 0.1s ease;
+}
+
+.closed {
+  background: var(--cell-closed-bg);
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-dark);
+}
+
+.open {
+  background: var(--cell-empty-bg);
+  cursor: default;
+  box-shadow: var(--shadow-inset-light);
+}
+
+.flag {
+  background: var(--flag-color);
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-dark);
+  
+  font-size: 2.5rem; 
+}
+
+.number1 { color: var(--number1-color); }
+.number2 { color: var(--number2-color); }
+.number3 { color: var(--number3-color); }
+.number4 { color: var(--number4-color); }
+.number5 { color: var(--number5-color); }
+.number6 { color: var(--number6-color); }
+.number7 { color: var(--number7-color); }
+.number8 { color: var(--number8-color); }
+
+
+.mine {
+  background: var(--mine-color);
+  box-shadow: var(--shadow-inset-dark);
+  color: var(--text-light);
+  
+  font-size: 2.5rem;
+}
+
+.mineClicked {
+  background: var(--lose-color);
+  animation: shake 0.2s 2;
+  box-shadow: var(--shadow-inset-dark);
+  color: var(--text-light);
+  
+  font-size: 2.5rem;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

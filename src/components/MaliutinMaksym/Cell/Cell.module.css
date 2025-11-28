@@ -1,0 +1,48 @@
+.cell {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.3em;
+    user-select: none;
+  }
+  
+  /* Закрыта */
+  .closed {
+    background: #e0e0e0;
+    cursor: pointer;
+  }
+  .closed:hover {
+    background: #d6d6d6;
+  }
+  
+  /* Вiдкрита */
+  .open {
+    background: #fdfdfd;
+  }
+  
+  /* Флажок */
+  .flagged {
+    background: #e0e0e0; /* Флаг ставиться на закриту клітинку */
+    cursor: pointer;
+    font-size: 1.1em;
+  }
+  
+  /* Мины */
+  .mine {
+    background: #d32f2f; /* Червоний фон для міни */
+    font-size: 1.1em;
+  }
+  
+  /* Числа */
+  .number1 { color: #1976d2; }
+  .number2 { color: #388e3c; }
+  .number3 { color: #d32f2f; }
+  .number4 { color: #7b1fa2; }
+  .number5 { color: #e65100; }
+  .number6 { color: #00897b; }
+  .number7 { color: #000000; }
+  .number8 { color: #616161; }

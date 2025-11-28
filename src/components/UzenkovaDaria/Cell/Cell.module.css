@@ -1,0 +1,61 @@
+:root {
+  --cell-bg: #ffffff;
+  --cell-border: #c9b6e4;
+  --btn: #a56dff;
+  --text: #3e2f5b;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--cell-border);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cellClosed {
+  background: var(--cell-bg);
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+}
+.cellClosed:hover {
+  background-color: #f5f0fa;
+}
+
+.cellOpen {
+  background: #e6d6f5;
+  color: var(--text);
+  box-shadow: inset -1px -1px 2px rgba(0,0,0,0.1);
+  cursor: default;
+}
+
+.cellNum1 { color: blue; }
+.cellNum2 { color: green; }
+.cellNum3 { color: red; }
+.cellNum4 { color: darkblue; }
+.cellNum5 { color: brown; }
+.cellNum6 { color: teal; }
+.cellNum7 { color: black; }
+.cellNum8 { color: gray; }
+
+.cellFlag {
+  background: var(--btn);
+  color: white;
+  font-size: 1.2em;
+}
+
+.cellMine {
+  background: black;
+  color: red;
+  font-size: 1.2em;
+}
+
+.cellMineClicked {
+  background: red;
+  color: white;
+  font-size: 1.2em;
+}
