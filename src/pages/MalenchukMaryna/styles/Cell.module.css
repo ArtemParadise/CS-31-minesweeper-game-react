@@ -1,0 +1,96 @@
+.cell {
+  aspect-ratio: 1 / 1;
+  user-select: none;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: clamp(12px, 2.1vw, 20px);
+  line-height: 1;
+  transition:
+    transform 0.05s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+  outline: none;
+}
+
+/* ЗАКРИТА клітинка – замальована, з легким градієнтом */
+.closed {
+  background: linear-gradient(145deg, #32364a, #252837);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 0 8px rgba(0, 0, 0, 0.6),
+    inset 0 0 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.closed:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+/* ВІДКРИТА клітинка */
+.open {
+  background: #111318;
+  border: 2px solid #3f4558;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Прапорець */
+.flag::after {
+  content: "🚩";
+  position: absolute;
+  font-size: 1.1em;
+}
+
+/* Міна */
+.mine.revealed::after {
+  content: "💣";
+  position: absolute;
+  font-size: 1.1em;
+}
+
+/* Анімація вибуху */
+.exploded {
+  animation: explode 0.25s ease-in-out 2;
+}
+
+@keyframes explode {
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+/* Кольори цифр (1–8) */
+.num1 {
+  color: #2563eb;
+}
+
+.num2 {
+  color: #16a34a;
+}
+
+.num3 {
+  color: #dc2626;
+}
+
+.num4 {
+  color: #1d4ed8;
+}
+
+.num5 {
+  color: #b91c1c;
+}
+
+.num6 {
+  color: #059669;
+}
+
+.num7 {
+  color: #f9fafb;
+}
+
+.num8 {
+  color: #9ca3af;
+}

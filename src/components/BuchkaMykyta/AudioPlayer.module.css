@@ -1,0 +1,129 @@
+/* --- main player layout (kept as in your design) --- */
+.customPlayer {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  overflow: visible; /* allow slider overflow */
+}
+
+.playerBg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  z-index: 1;
+  transition: background-image 0.5s ease;
+}
+
+.playerContent { position: relative; z-index: 2; }
+
+.trackInfo { margin-bottom: 15px; text-align: center; }
+.trackTitle { margin: 0; font-size: 1.2em; font-weight: 600; }
+.trackArtist { margin: 5px 0 0; font-size: 0.9em; opacity: 0.8; }
+
+.playerControls { display:flex; align-items:center; gap:15px; }
+
+/* play/pause */
+.playPause {
+  width: 40px; height: 40px; border-radius: 50%; border:none;
+  background:#ff2d55; color:white; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; font-size:16px;
+}
+.playPause:hover { transform: scale(1.05); }
+
+/* progress */
+.progressArea { flex:1; }
+.progressBar {
+  height:6px; background: rgba(255,255,255,0.15); border-radius:3px; position:relative; cursor:pointer;
+}
+.currentProgress { position:absolute; left:0; top:0; height:100%; background:#ff2d55; border-radius:3px; transition: width .12s linear; }
+.timeInfo { display:flex; justify-content:space-between; font-size:0.8em; margin-top:5px; }
+
+/* ---------- Volume area (OLD-style behavior implemented) ---------- */
+.volumeContainer {
+  position: relative;
+  /* keep gap/space under the button if needed */
+  padding-bottom: 10px; /* you wanted the spacing to remain */
+}
+
+/* inner wrapper (keeps layout stable) */
+.volumeInner {
+  position: relative;
+  display: inline-block;
+}
+
+/* button */
+.volumeBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* slider: always in DOM; visibility controlled via opacity & pointer-events */
+.volumeSlider {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px); /* slight offset for nicer look */
+  width: 26px;
+  height: 110px;
+  background: #222;
+  border-radius: 14px;
+  padding: 10px 0;
+  margin-bottom: 10px; /* you requested this; kept */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 30;
+}
+
+/* visible state: used both for JS and hover fallback */
+.volumeSlider.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* optional: keep hover CSS as fallback but JS drives real behavior */
+.volumeContainer:hover .volumeSlider { opacity:1; pointer-events:auto; transform: translateX(-50%) translateY(0); }
+
+/* slider internals */
+.volumeBar {
+  height: 100%;
+  width: 4px;
+  background: rgba(255,255,255,0.12);
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.volumeProgress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ff2d55;
+  border-radius: 2px;
+}
+
+/* album art */
+.albumArt { width:100px; height:100px; margin:0 auto 15px; border-radius:50%; overflow:hidden; box-shadow:0 0 20px rgba(0,0,0,0.3); }
+.albumArt img { width:100%; height:100%; object-fit:cover; }
+.rotating { animation: rotate 20s linear infinite; }
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* prev/next */
+.prevTrack, .nextTrack { background:none; border:none; color:white; cursor:pointer; padding:10px; font-size:16px; opacity:0.8; display:flex; align-items:center; justify-content:center; }
+.prevTrack:hover, .nextTrack:hover { opacity:1; }
