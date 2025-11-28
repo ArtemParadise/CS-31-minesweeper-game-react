@@ -57,6 +57,7 @@ function Game() {
       author: "Uzenkova Daria",
       link: "/uzenkova-daria",
       difficulty: "Intermediate",
+      status: "Complete"
       status: "Complete",
     },
     {
@@ -76,6 +77,21 @@ function Game() {
       author: "Prohvatilov Anton",
       link: "/prohvatilov-anton",
       difficulty: "Intermediate",
+      status: "In Progress"
+    },
+    {
+      id: 17,
+      title: "Minesweeper - Kovalov Andrii",
+      description:
+        "A React migration of the classic game using components, state management, and CSS Modules.",
+      author: "Kovalov Andrii",
+      link: "/kovalov-andrii", 
+      difficulty: "Intermediate",
+      status: "Complete",
+    },
+
+
+  ]
       status: "In Progress",
     },
     {

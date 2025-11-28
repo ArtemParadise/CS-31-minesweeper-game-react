@@ -12,6 +12,7 @@ import MalenchukMarynaPage from "./pages/MalenchukMaryna";
 import MinesweeperSiller from "./components/SillerOlena/Minesweeper";
 import GubinBogdanGame from "./pages/GubinBogdan/GubinBogdanGame";
 import ZhukovDanyloPage from "./pages/ZhukovDanylo";
+import KovalovAndriiPage from './pages/KovalovAndrii';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="maliutin-maksym" element={<MaliutinMaksymGame />} />
         <Route path="uzenkova-daria" element={<UzenkovaDaria />} />
         <Route path="prohvatilov-anton" element={<ProhvatilovAntonGame />} />
+        <Route path="kovalov-andrii" element={<KovalovAndriiPage />} />
         <Route path="buchka-mykyta" element={<BuchkaMykyta />} />
         <Route path="malenchuk-maryna" element={<MalenchukMarynaPage />} />
         <Route path="siller-olena" element={<MinesweeperSiller />} />
