@@ -1,0 +1,169 @@
+/* Game.module.css - single module containing board, cell, counters, reset visuals */
+
+/* container & layout */
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 50px auto;
+  width: min-content;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  background-color: #c0c0c0;
+  font-family: monospace;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.counter {
+  display: flex;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  align-items: center;
+}
+
+/* grid */
+.gameField {
+  display: grid;
+  width: fit-content;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  gap: 0;
+}
+
+/* reset button base + states */
+.resetButton {
+  border: none;
+  background-color: #c0c0c0;
+  width: 24px;
+  height: 24px;
+  background-image: url('/src/assets/SkrypniakTaras/reset.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* separate state classes (so we can toggle via CSS module) */
+.scared {
+  background-image: url('/src/assets/SkrypniakTaras/reset1.png');
+}
+
+.loss {
+  background-image: url('/src/assets/SkrypniakTaras/reset3.png');
+}
+
+.win {
+  background-image: url('/src/assets/SkrypniakTaras/reset2.png');
+}
+
+/* digit images */
+.digit {
+  width: 13px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.digit-0 { background-image: url('/src/assets/SkrypniakTaras/counter0.png'); }
+.digit-1 { background-image: url('/src/assets/SkrypniakTaras/counter1.png'); }
+.digit-2 { background-image: url('/src/assets/SkrypniakTaras/counter2.png'); }
+.digit-3 { background-image: url('/src/assets/SkrypniakTaras/counter3.png'); }
+.digit-4 { background-image: url('/src/assets/SkrypniakTaras/counter4.png'); }
+.digit-5 { background-image: url('/src/assets/SkrypniakTaras/counter5.png'); }
+.digit-6 { background-image: url('/src/assets/SkrypniakTaras/counter6.png'); }
+.digit-7 { background-image: url('/src/assets/SkrypniakTaras/counter7.png'); }
+.digit-8 { background-image: url('/src/assets/SkrypniakTaras/counter8.png'); }
+.digit-9 { background-image: url('/src/assets/SkrypniakTaras/counter9.png'); }
+/* minus sign */
+.digit-dash { background-image: url('/src/assets/SkrypniakTaras/counter-.png'); }
+
+/* cell base and revealed look */
+.cell, .done .flag.mine {
+  width: 16px;
+  height: 16px;
+  background-color: #c0c0c0;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.revealed {
+  border-width: 1px;
+  padding: 2px 0;
+  border-color: #808080 #c0c0c0 #c0c0c0 #808080;
+  background-color: transparent;
+}
+
+/* flag and mine visuals */
+.flag {
+  background-image: url('/src/assets/SkrypniakTaras/flag.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* un-revealed mine: no image until revealed */
+.mine {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* revealed mine (loss) */
+.mine.revealed {
+  background-image: url('/src/assets/SkrypniakTaras/mine.png');
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* show a 'no mine' icon for incorrectly flagged cells when game done */
+.done .flag:not(.mine) {
+  background-image: url('/src/assets/SkrypniakTaras/nomine.png') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* flagged mine on done (keep flag) */
+.done .flag.mine {
+  background-image: url('/src/assets/SkrypniakTaras/flag.png');
+}
+
+/* number images: create basic classes and ensure the image is shown only when revealed */
+.number-1 { }
+.number-2 { }
+.number-3 { }
+.number-4 { }
+.number-5 { }
+.number-6 { }
+.number-7 { }
+.number-8 { }
+
+.number-1.revealed { background-image: url('/src/assets/SkrypniakTaras/1.png'); }
+.number-2.revealed { background-image: url('/src/assets/SkrypniakTaras/2.png'); }
+.number-3.revealed { background-image: url('/src/assets/SkrypniakTaras/3.png'); }
+.number-4.revealed { background-image: url('/src/assets/SkrypniakTaras/4.png'); }
+.number-5.revealed { background-image: url('/src/assets/SkrypniakTaras/5.png'); }
+.number-6.revealed { background-image: url('/src/assets/SkrypniakTaras/6.png'); }
+.number-7.revealed { background-image: url('/src/assets/SkrypniakTaras/7.png'); }
+.number-8.revealed { background-image: url('/src/assets/SkrypniakTaras/8.png'); }

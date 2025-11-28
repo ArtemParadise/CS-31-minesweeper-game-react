@@ -38,6 +38,15 @@ function Game() {
       link: "#",
       difficulty: "Advanced",
       status: "Planning"
+    },
+    {
+      id: 5,
+      title: "Classic Minesweeper",
+      description: "bobi boba",
+      author: "Skrypniak Taras",
+      link: "/skrypniak-taras",
+      difficulty: "Advanced",
+      status: "Complete"
     }
   ]
 
