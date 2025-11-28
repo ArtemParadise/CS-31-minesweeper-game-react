@@ -37,7 +37,17 @@ function Game() {
       author: "Author name",
       link: "#",
       difficulty: "Advanced",
-      status: "Planning",
+
+      status: "Planning"
+    },
+    {
+      id: 5,
+      title: "Classic Minesweeper",
+      description: "bobi boba",
+      author: "Skrypniak Taras",
+      link: "/skrypniak-taras",
+      difficulty: "Advanced",
+      status: "Complete"
     },
     {
       id: 42,
@@ -119,7 +129,7 @@ function Game() {
       status: "Complete",
     },
   ];
-
+  
   const getStatusColor = (status) => {
     switch (status) {
       case "Complete":
