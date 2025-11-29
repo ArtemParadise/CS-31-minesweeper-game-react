@@ -1,0 +1,52 @@
+.topPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    background: #c0c0c0;
+    border: 3px solid #fff;
+    box-shadow: inset -2px -2px 0 #111, inset 2px 2px 0 #fff;
+}
+
+.counter {
+    width: 50px;
+    height: 30px;
+    background: black;
+    color: red;
+    font-size: 28px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Digital-7", monospace;
+    border: 2px solid #333;
+}
+
+/* Статуси кнопки */
+.normal {
+    width: 32px;
+    height: 32px;
+    background-image: url("../assets/reset_button.png");
+    background-size: cover;
+    border: 2px solid #fff;
+    box-shadow: inset -2px -2px 0 #111, inset 2px 2px 0 #fff;
+    cursor: pointer;
+}
+
+.lost {
+    width: 32px;
+    height: 32px;
+    background-image: url("../assets/red_mine.png");
+    background-size: cover;
+    border: 2px solid #fff;
+    box-shadow: inset -2px -2px 0 #111, inset 2px 2px 0 #fff;
+    cursor: pointer;
+}
+
+.won {
+    width: 32px;
+    height: 32px;
+    background-image: url("../assets/flag.png");
+    background-size: cover;
+    border: 2px solid #fff;
+    box-shadow: inset -2px -2px 0 #111, inset 2px 2px 0 #fff;
+    cursor: pointer;
+}

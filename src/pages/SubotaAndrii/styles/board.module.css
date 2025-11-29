@@ -1,0 +1,11 @@
+.board {
+    margin-top: 10px;
+    background: #c0c0c0;
+    border: 3px solid #fff;
+    box-shadow: inset -2px -2px 0 #111, inset 2px 2px 0 #fff;
+
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-template-rows: repeat(16, 20px);
+    gap: 0;
+}
